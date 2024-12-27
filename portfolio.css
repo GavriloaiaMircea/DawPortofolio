@@ -1,0 +1,126 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-section {
+  flex: 1;
+  padding: 80px 0;
+}
+
+.section-title {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.9),
+    rgba(102, 16, 242, 0.9)
+  );
+  opacity: 0.8;
+}
+
+.project-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  color: #2d2d2d;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.project-links .btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-links .btn:hover {
+  transform: translateY(-2px);
+}
+
+footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.tech-stack {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background: #f8f9fa;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
