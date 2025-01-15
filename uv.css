@@ -5,22 +5,22 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 56px;
+  padding-top: 56px; /* Account for fixed navbar */
 }
 
-.weather-hero {
+.uv-hero {
   background: linear-gradient(135deg, #007bff, #6610f2);
   color: white;
   padding: 100px 0 80px;
   text-align: center;
 }
 
-.weather-section {
+.uv-section {
   flex: 1;
   padding: 80px 0;
 }
 
-.weather-card {
+.uv-card {
   background: white;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -30,28 +30,18 @@ body {
   transition: transform 0.3s ease;
 }
 
-.weather-card:hover {
+.uv-card:hover {
   transform: translateY(-5px);
 }
 
-#weatherResult {
+#uvResult {
   margin-top: 2rem;
   text-align: center;
 }
 
-#weatherResult h2 {
+#uvResult h2 {
   color: #007bff;
   margin-bottom: 1rem;
-}
-
-.weather-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.weather-details p {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
 }
 
 .btn-primary {
@@ -71,6 +61,7 @@ footer {
   margin-top: auto;
 }
 
+/* Loading Animation */
 .loading {
   display: inline-block;
   width: 50px;
@@ -87,16 +78,44 @@ footer {
   }
 }
 
+/* UV Risk Levels */
+.risk-low {
+  color: #28a745;
+}
+.risk-moderate {
+  color: #ffc107;
+}
+.risk-high {
+  color: #fd7e14;
+}
+.risk-very-high {
+  color: #dc3545;
+}
+.risk-extreme {
+  color: #6f42c1;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .weather-hero {
+  .uv-hero {
     padding: 60px 0 40px;
   }
 
-  .weather-section {
+  .uv-section {
     padding: 40px 0;
   }
 
-  .weather-card {
+  .uv-card {
     padding: 1.5rem;
   }
+}
+
+/* Navbar styles */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(33, 37, 41, 0.95) !important;
+  backdrop-filter: blur(10px);
 }
